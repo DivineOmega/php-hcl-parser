@@ -1,7 +1,7 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 use DivineOmega\HCLParser\HCLParser;
+use PHPUnit\Framework\TestCase;
 
 class BasicUsageTest extends TestCase
 {
@@ -14,5 +14,4 @@ class BasicUsageTest extends TestCase
 
         $this->assertEquals($expected, $configObject);
     }
-
 }
