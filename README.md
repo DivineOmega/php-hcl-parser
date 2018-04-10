@@ -16,8 +16,7 @@ composer require divineomega/php-hcl-parser
 
 ## Usage
 
-To parse HCL into a PHP object, create a new `HCLParser` object passing a string of HCL configuration
-as the first parameter of the construction, then call the `parse` method. See the example below.
+To parse HCL into a PHP object, create a new `HCLParser` object, passing it the HCL (as a string), then call the `parse` method. See the example below.
 
 ```php
 $hcl = file_get_contents('example.tf');
