@@ -24,7 +24,7 @@ $hcl = file_get_contents('example.tf');
 $configObject = (new HCLParser($hcl))->parse();
 ```
 
-The resulting object will be returned in the following format.
+The resulting object will look similar to the following.
 
 ```php
 object(stdClass)#5 (2) {
