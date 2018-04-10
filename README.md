@@ -20,22 +20,7 @@ To parse HCL into a PHP object, create a new `HCLParser` object passing a string
 as the first parameter of the construction, then call the `parse` method. See the example below.
 
 ```php
-$hcl = '
-# Specify the provider and access details
-provider "aws" {
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
-  region     = "${var.region}"
-}
-
-# Create an instance
-resource "aws_instance" "example" {
-  ami           = "ami-2757f631"
-  instance_type = "t2.micro"
-}
-
-';
-
+$hcl = file_get_contents('example.tf');
 $configObject = (new HCLParser($hcl))->parse();
 ```
 
