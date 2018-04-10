@@ -10,6 +10,10 @@
         }
     ],
     "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "satooshi/php-coveralls": "^2.0"
+    },
     "autoload": {
         "psr-4": {
             "DivineOmega\\HCLParser\\": "./src/"
