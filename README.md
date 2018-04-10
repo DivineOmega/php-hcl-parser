@@ -1,4 +1,4 @@
-# PHP HCL Parser
+# ⚒🔀🐘 PHP HCL Parser
 
 HCL is a configuration language make by HashiCorp. HCL files are used by several HashiCorp products,
 including Terraform.
