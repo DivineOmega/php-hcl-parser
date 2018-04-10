@@ -8,7 +8,7 @@ abstract class Installer
     {
         $binaryUrls = ['https://github.com/kvz/json2hcl/releases/download/v0.0.6/json2hcl_v0.0.6_linux_amd64'];
 
-        foreach($binaryUrls as $binaryUrl) {
+        foreach ($binaryUrls as $binaryUrl) {
             $destination = __DIR__.'/../bin/'.basename($binaryUrl);
 
             if (file_exists($destination)) {
