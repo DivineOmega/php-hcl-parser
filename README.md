@@ -1,5 +1,8 @@
 # ⚒🔀🐘 PHP HCL Parser
 
+[![Build Status](https://travis-ci.org/DivineOmega/php-hcl-parser.svg?branch=master)](https://travis-ci.org/DivineOmega/php-hcl-parser)
+[![Coverage Status](https://coveralls.io/repos/github/DivineOmega/php-hcl-parser/badge.svg?branch=master)](https://coveralls.io/github/DivineOmega/php-hcl-parser?branch=master)
+
 HCL is a configuration language make by HashiCorp. HCL files are used by several HashiCorp products,
 including Terraform.
 
