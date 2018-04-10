@@ -10,6 +10,11 @@ abstract class Installer
 
         foreach($binaryUrls as $binaryUrl) {
             $destination = __DIR__.'/../bin/'.basename($binaryUrl);
+
+            if (file_exists($destination)) {
+                continue;
+            }
+
             file_put_contents($destination, file_get_contents($binaryUrl));
             chmod($destination, 0755);
         }
