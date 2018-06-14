@@ -3,8 +3,7 @@
 namespace DivineOmega\HCLParser;
 
 /**
- * Class HCLParser
- * @package DivineOmega\HCLParser
+ * Class HCLParser.
  */
 class HCLParser
 {
@@ -15,6 +14,7 @@ class HCLParser
 
     /**
      * HCLParser constructor.
+     *
      * @param $hcl
      */
     public function __construct($hcl)
@@ -27,7 +27,7 @@ class HCLParser
      */
     private function getJSONString()
     {
-        $command = __DIR__.'/../bin/' . Installer::getBinaryFilename() . ' --reverse <<\'EOF\''.PHP_EOL.$this->hcl.PHP_EOL.'EOF';
+        $command = __DIR__.'/../bin/'.Installer::getBinaryFilename().' --reverse <<\'EOF\''.PHP_EOL.$this->hcl.PHP_EOL.'EOF';
 
         exec($command, $lines);
 
