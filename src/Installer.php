@@ -22,7 +22,10 @@ abstract class Installer
         // Defaults
         $osString = 'linux';
         $architecture = 'amd64';
-
+        
+        // We can not test alternative architectures and operating systems, so exclude from code coverage.
+        // @codeCoverageIgnoreStart
+        
         // Switch architecture if needed
         if (2147483647 == PHP_INT_MAX) {
             $architecture = '386';
@@ -37,6 +40,8 @@ abstract class Installer
                 $osString = 'windows';
                 break;
         }
+        
+        // @codeCoverageIgnoreEnd
 
         return sprintf('json2hcl_v%s_%s_%s', self::JSON2HCL_VERSION, $osString, $architecture);
     }
