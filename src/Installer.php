@@ -19,6 +19,8 @@ abstract class Installer
      */
     public static function getBinaryFilename()
     {
+        # Defaults
+        $osString = 'linux';
         $architecture = 'amd64';
 
         # Switch architecture if needed
@@ -26,9 +28,7 @@ abstract class Installer
             $architecture = '386';
         }
 
-        # Default OS
-        $osString = 'linux';
-
+        # Switch Operating System if needed
         switch (TRUE) {
             case stristr(PHP_OS, 'DAR'):
                 $osString = 'darwin';
