@@ -25,9 +25,23 @@ class HCLParser
     /**
      * @return string
      */
+    private function getBinaryPath()
+    {
+        $binaryPath = __DIR__.'/../bin/'.Installer::getBinaryFilename();
+
+        if (!file_exists($binaryPath)) {
+            Installer::installBinaries();
+        }
+
+        return $binaryPath;
+    }
+
+    /**
+     * @return string
+     */
     private function getJSONString()
     {
-        $command = __DIR__.'/../bin/'.Installer::getBinaryFilename().' --reverse <<\'EOF\''.PHP_EOL.$this->hcl.PHP_EOL.'EOF';
+        $command = $this->getBinaryPath().' --reverse <<\'EOF\''.PHP_EOL.$this->hcl.PHP_EOL.'EOF';
 
         exec($command, $lines);
 
