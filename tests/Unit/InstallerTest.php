@@ -1,5 +1,7 @@
 <?php
 
+namespace DivineOmega\HCLParser\HCLParser\Tests;
+
 use DivineOmega\HCLParser\Installer;
 use PHPUnit\Framework\TestCase;
 
